@@ -10,6 +10,7 @@ set (FTT_ATCH_HDRS
 
 add_cpplint_files (${CMAKE_CURRENT_SOURCE_DIR} "${FTT_ARCH_SRCS};${FTT_ARCH_HDRS}")
 
+build_unified(P4TEST_SRCS ALL)
 add_executable(p4c-ftt ${FTT_ARCH_SRCS})
 target_link_libraries (p4c-ftt ${P4C_LIBRARIES} ${P4C_LIB_DEPS})
 add_dependencies(p4c-ftt genIR)
