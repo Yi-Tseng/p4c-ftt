@@ -9,9 +9,11 @@ To compile it, link this directory in to `p4c/extensions` and compile the p4c.
 
 ```bash
 $ cd p4c
+$ mkdir -p extensions
+$ ln -s three-table-arch extensions/three-table-arch
 $ ./bootstrap
-$ ln -s 'PATH_OF_THIS_DIR' extensions/three-table-arch
 $ cd build && make -j4
+$ make install
 ```
 
 ## Tutorials (Mandarin, Traditional Chinese) (_Work in progress_)
