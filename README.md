@@ -21,7 +21,8 @@ $ make install
  - [x] [P4 Compiler overview and architecture](https://p4tw.org/p4-compiler-architecure/)
  - [x] [Create your own architecture package](https://p4tw.org/p4-copmiler-define-architecture-package/)
  - [x] [Create new compiler for your target and put it into p4c](https://p4tw.org/p4-compiler-create-new-bc/)
- - [ ] Add frontend and midend compiler to your compiler binary
+ - [X] [Add frontend compiler to your compiler binary](https://p4tw.org/p4-compiler-add-frontend/)
  - [ ] IR introduction and what IR looks like
- - [ ] Visitors
+ - [ ] Visitors, PassManager....
+ - [ ] Midend
  - [ ] Complete the backend compiler
