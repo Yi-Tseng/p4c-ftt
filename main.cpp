@@ -9,6 +9,8 @@
 
 #include "lib/nullstream.h"
 
+#include "ftt_midend/ftt_midend.h"
+
 class FTTOptions : public CompilerOptions {
  public:
     cstring outputFile = nullptr;
@@ -52,8 +54,24 @@ int main(int argc, char *const argv[]) {
         return 1;
     }
 
-    if (options.dumpJsonFile) {
-        JSONGenerator(*openFile(options.dumpJsonFile, true), true) << program << std::endl;
+    FttMidEnd midEnd(options);
+
+    const IR::ToplevelBlock *top = nullptr;
+    try {
+        top = midEnd.process(program);
+    } catch (const Util::P4CExceptionBase &bug) {
+        std::cerr << bug.what() << std::endl;
+        return 1;
     }
+
+    std::cout << top << std::endl;
+    std::cout << std::endl << std::endl;
+    std::cout << program << std::endl;
+
+    if (options.dumpJsonFile) {
+        JSONGenerator(*openFile(options.dumpJsonFile, true), true) << top << std::endl;
+    }
+
+
 
 }
