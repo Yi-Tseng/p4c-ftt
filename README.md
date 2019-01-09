@@ -23,5 +23,5 @@ $ make install
  - [x] [Create new compiler for your target and put it into p4c](https://p4tw.org/p4-compiler-create-new-bc/)
  - [x] [Add frontend compiler to your compiler binary](https://p4tw.org/p4-compiler-add-frontend/)
  - [x] [IR and Visitor introduction](https://p4tw.org/p4-compiler-ir-and-visitor/)
- - [ ] Midend
+ - [x] [Midend](https://p4tw.org/p4-compiler-midend/)
  - [ ] Complete the backend compiler
